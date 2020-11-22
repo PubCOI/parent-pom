@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.pubcoi</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>parent</name>
+    <url>https://github.com/PubCOI/parent-pom</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <version.junit>4.11</version.junit>
+        <version.jaxb>2.3.1</version.jaxb>
+        <version.jaxb2-maven-plugin>2.5.0</version.jaxb2-maven-plugin>
+        <version.jaxb2-basics>1.11.1</version.jaxb2-basics>
+        <version.jaxb2-fluent-api>3.0</version.jaxb2-fluent-api>
+        <!-- threeten = JSR-310 tools -->
+        <version.threeten-jaxb-core>1.2</version.threeten-jaxb-core>
+        <version.spring-boot-starter>1.0.2.RELEASE</version.spring-boot-starter>
+        <version.spring-boot-dependencies>2.3.6.RELEASE</version.spring-boot-dependencies>
+        <version.pubcoi>1.0-SNAPSHOT</version.pubcoi>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.pubcoi</groupId>
+                <artifactId>schema</artifactId>
+                <version>${version.pubcoi}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
